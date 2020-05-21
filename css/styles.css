@@ -36,6 +36,10 @@ header {
     align-items: center;
 }
 
+nav {
+    font-family: 'Monoton', cursive;
+}
+
 .menu {
     background-color: white;
     position: fixed;
@@ -69,14 +73,60 @@ a:hover {
 
 .site-title,
 .site-subtitle {
-    color: blue;
+    color: antiquewhite;
     text-align: center;
+    line-height: 1.8em;
 }
 
 .site-title {
     font-size: 4em;
+    font-family: 'Carter One', cursive;
 }
 
 .site-subtitle {
     font-style: italic;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.portfolio {
+    padding: 2em;
+    height: 100vh;
+}
+
+.portfolio h2 {
+    /* font-family: 'Monoton', cursive; */
+    color: antiquewhite;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 560px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(2, 240px);
+    }
+}
+
+@media (min-width: 880px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3, 240px);
+        justify-content: center;
+        height: calc(100vh - 4em - 48px - 1.5em);
+    }
+}
+
+.portfolio figure {
+    text-align: center;
+}
+
+.img-portfolio {
+    height: 180px;
+    width: 240px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 10%;
 }
